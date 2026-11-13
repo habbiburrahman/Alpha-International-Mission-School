@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Fee Payment | Alpha International Mission School</title>
+
+    <link rel="stylesheet" href="feepayment.css">
+</head>
+<body>
+
+    <header class="fee-header">
+
+    <div class="fee-brand">
+        <img src="logo.jpg" alt="School Logo">
+
+        <div>
+            <h2>Alpha International Mission School</h2>
+            <p>Online Fee Payment Portal</p>
+        </div>
+    </div>
+
+</header>
+
+    <main class="fee-container">
+
+        <section class="fee-card">
+
+            <h1>Online Fee Payment</h1>
+            <p class="subtitle">Pay your school fees securely</p>
+
+            <div class="qr-section">
+                <h2>Scan & Pay</h2>
+
+                <img src="qr.jpeg"
+                     alt="School UPI QR Code">
+
+                <p>Scan this QR code using your UPI app.</p>
+            </div>
+
+            <div class="instructions">
+                <h3>Payment Instructions</h3>
+                <ul>
+                    <li>Scan the official school QR code.</li>
+                    <li>Complete payment using your UPI app.</li>
+                    <li>Enter the correct transaction ID / UTR.</li>
+                    <li>Submit your payment details for verification.</li>
+                </ul>
+            </div>
+
+            <h2 class="form-heading">Submit Payment Details</h2>
+
+           
+          <form id="feeForm"
+             action="https://script.google.com/macros/s/AKfycbyHHfgve0ccHlrfiFAKOnMcRSwsRVxPsZPP0RyYc681N_k5cHLymcR5t5RaXj4qGos/exec"
+             method="POST">
+
+                
+                
+                
+                
+                <div class="form-group">
+
+                    <label for="studentName">Student Name *</label>
+                    <input type="text" id="studentName"
+                           name="studentName" required
+                           placeholder="Enter student name">
+                </div>
+
+                <div class="form-group">
+                    <label for="admissionNumber">Admission Number *</label>
+                    <input type="text" id="admissionNumber"
+                           name="admissionNumber" required
+                           placeholder="Enter admission number">
+                </div>
+
+                <div class="form-group">
+                    <label for="className">Class *</label>
+                    <select id="className" name="className" required>
+                        <option value="">Select Class</option>
+                        <option>Nursery</option>
+                        <option>LKG</option>
+                        <option>UKG</option>
+                        <option>Class 1</option>
+                        <option>Class 2</option>
+                        <option>Class 3</option>
+                        <option>Class 4</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rollNumber">Roll Number</label>
+                    <input type="text" id="rollNumber"
+                           name="rollNumber"
+                           placeholder="Enter roll number">
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Fee Amount (₹) *</label>
+                    <input type="number" id="amount"
+                           name="amount" min="1" required
+                           placeholder="Enter payment amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="utr">Transaction ID / UTR Number *</label>
+                    <input type="text" id="utr" name="utr"
+                           required placeholder="Enter UTR number">
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentDate">Payment Date *</label>
+                    <input type="date" id="paymentDate"
+                           name="paymentDate" required>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Submit Payment Details
+                </button>
+
+                <p id="feeMessage" aria-live="polite"></p>
+
+            </form>
+
+            <p class="verification-note">
+                Payment will be confirmed only after school verification.
+            </p>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+
+        </section>
+
+    </main>
+
+    <footer class="fee-footer">
+        <p>© Alpha International Mission School. All Rights Reserved.</p>
+    </footer>
+
+    <script src="fee-payment.js"></script>
+</body>
+</html>
